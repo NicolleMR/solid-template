@@ -1,0 +1,157 @@
+$fa-font-path: "./styles/fontawesome/webfonts";
+$font_size: 20;
+@function pxTorem($pixels) {
+    @return ($pixels / $font_size) + rem;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Italic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: pxTorem(30);
+    font-size: $font_size + px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+   
+    font-family: SourceSansPro;
+    margin: 0;
+    background: #1D2026;
+    background-image: url(./assets/hero-back-illustration.svg);
+    background-repeat: no-repeat;
+    background-position-x: pxTorem(647);
+    background-position-y: pxTorem(-64);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: pxTorem(700);
+        background: #242830;
+        background: linear-gradient(80deg, rgba(36,40,48,0.5) 0%, rgba(36,40,48,0) 100%);
+        transform-origin: 0;
+        transform: skewY(-12deg);
+        box-sizing: inherit;
+        z-index: 0;
+    }
+}
+.header {
+    position: relative;
+    z-index: 1;
+    padding: pxTorem(53) 0 0;
+    @media (max-width:600px) {
+        padding: pxTorem(34) 0 pxTorem(15);
+    } 
+
+    &__contain {
+        padding: pxTorem(24);
+        max-width: pxTorem(1128);
+        margin: 0 auto;
+        @media (max-width:600px) {
+            padding: 0 pxTorem(19) 0;
+        }
+    }
+}
+.wraper {
+    padding: pxTorem(24);
+    max-width: pxTorem(1128);
+    margin: 0 auto;
+    @media (max-width:600px) {
+        padding: pxTorem(5) pxTorem(24);
+    }
+   
+}
+.main {
+    padding: pxTorem(64) 0 pxTorem(88);
+    @media (max-width:600px) {
+       padding: pxTorem(25) 0;
+    }
+}
+
+@import "./styles/fontawesome/scss/_fontawesome.scss";
+@import "./styles/fontawesome/scss/_solid.scss";
+@import "./styles/fontawesome/scss/_brands.scss";
+@import "./styles/_hero.scss";
+@import "./styles/_features.scss";
+@import "./styles/_pricing.scss";
+@import "./styles/_banner.scss";
+@import "./styles/_footer.scss";

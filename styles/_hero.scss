@@ -1,0 +1,94 @@
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding-bottom: pxTorem(88);
+
+    &__container {
+        padding-right: pxTorem(64);
+        width: 100%;
+        max-width: pxTorem(552);
+        text-align: left;
+        @media (max-width:600px) {
+          padding-right: 0;
+        }
+    }
+    
+    &__title {
+        font-size: pxTorem(44);
+        line-height: pxTorem(54);
+        color: #fff;
+        margin: 0 0 pxTorem(16);
+
+        @media (max-width:600px) {
+            text-align: center;
+            font-size: pxTorem(40);
+            width: pxTorem(328);
+            font-weight: 600;
+        }
+    
+    }
+    
+    &__text {
+        color: #8A94A7;
+        font-size: pxTorem(20);
+        margin-top: 0;
+        margin-bottom: pxTorem(24);
+        max-width: pxTorem(430);
+
+        @media (max-width:600px) {
+            width: pxTorem(337);
+            text-align: center;
+            margin: 0 auto pxTorem(30);
+        }
+        
+    }
+    &__buttons {
+        @media (max-width:600px) {
+            display: flex;
+            flex-direction: column;
+            max-width: pxTorem(280);
+            margin: 0 auto;
+        }
+    }
+    &__btn {
+        background-color: #242830;
+        border-color: #262a33;
+        font-size: pxTorem(14);
+        color: #fff;
+        padding: pxTorem(16) pxTorem(32);
+        border: none;
+        border-radius: pxTorem(2);
+        font-weight: 600;
+        cursor: pointer;
+
+        @media (max-width:600px) {
+            width: 100%;
+        }
+        
+        &:hover{
+            background: #262a33;
+        }
+    }
+    &__btn--width {
+        @media (min-width:601px) {
+            width: 100%;
+            max-width: pxTorem(170);
+        }
+    }
+    &__btn--blue {
+        background-color: #097dea;
+        @media (max-width:600px) {
+            margin-bottom:pxTorem(20);
+        }
+        &:hover {
+            background: linear-gradient(65deg, #0270D7 0, #0F8AFD 100%);
+        }
+        &:first-child {
+            margin-right: pxTorem(16);
+            @media (max-width:600px) {
+                margin-right: 0;
+            }
+        } 
+    }
+}

@@ -1,0 +1,33 @@
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+    grid-gap: pxTorem(23);
+    padding: pxTorem(120) 0 pxTorem(88);
+    grid-column-gap: pxTorem(40);
+    grid-row-gap: pxTorem(45);
+    border-bottom: pxTorem(1) solid #242830;
+
+    &__item {
+        text-align: center;
+    }
+    &__title {
+        font-size:pxTorem(24);
+        line-height: pxTorem(34);
+        color: #fff;
+        font-weight: 600;
+        @media (max-width:600px) {
+            margin: pxTorem(24) 0 pxTorem(4);
+        }
+    }
+    &__text {
+        max-width: pxTorem(340);
+        font-size: pxTorem(18);
+        line-height: pxTorem(28);
+        color: #8A94A7;
+        margin: auto;
+
+        @media (max-width:600px) {
+            max-width: pxTorem(311);
+        }
+    }
+}

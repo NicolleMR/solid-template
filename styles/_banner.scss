@@ -1,0 +1,58 @@
+.banner {
+    max-width: pxTorem(1128);
+    margin: 0 auto;
+    padding: pxTorem(88) pxTorem(24) 0;
+
+    &__more-info {
+        background-color: #15181D;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: pxTorem(35) pxTorem(25);
+        position: relative;
+        overflow: hidden;
+        
+        @media (max-width:600px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: pxTorem(98);
+            top: pxTorem(-117);
+            width: pxTorem(160);
+            height: pxTorem(187);
+            background-image: url(./assets/cta-illustration.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__title {
+        color: #fff;
+
+        @media (max-width:600px) {
+            font-size: pxTorem(24);
+            text-align: center;
+            margin: 0 0 pxTorem(40);
+        }
+       
+    }
+    &__btn {
+        padding: pxTorem(16) pxTorem(32);
+        color: #fff;
+        font-size: pxTorem(14);
+        font-weight: 600;
+        outline: none;
+        border: pxTorem(1) solid #097dea;
+        border-radius: pxTorem(2);
+        background-color: #097dea;
+
+        @media (max-width:600px) {
+            width: pxTorem(280);
+        }
+        &:hover {
+            background: linear-gradient(65deg, #0270D7 0, #0F8AFD 100%);
+        }
+    }
+}
